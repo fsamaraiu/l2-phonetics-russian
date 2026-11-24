@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Russian L2 phonetics pronunciation task." />
+    <title>Russian L2 Phonetics Study</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="masthead">
+        <h1>Russian L2 Phonetics Study</h1>
+        <p class="intro">Follow the prompts and record your responses on your phone.</p>
+      </section>
+
+      <section id="setup-screen" class="instructions">
+        <h2>Instructions</h2>
+        <p>Use your phone to make one continuous recording. Follow each prompt, say each item once at a natural pace, then select <strong>Next</strong>.</p>
+        <button id="begin-button" class="primary">Begin</button>
+      </section>
+
+      <section id="runner-screen" class="runner hidden" aria-live="polite">
+        <header class="runner-header">
+          <p id="stage-label" class="eyebrow"></p>
+          <p id="counter" class="counter"></p>
+        </header>
+        <div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div>
+        <article class="trial-card">
+          <p id="instruction" class="instruction"></p>
+          <div id="prompt" class="prompt"></div>
+          <div id="audio-controls" class="audio-controls hidden">
+            <button id="play-audio" class="secondary">Play recording</button>
+            <p id="audio-status" class="hint" role="status"></p>
+          </div>
+        </article>
+        <div class="runner-actions">
+          <button id="next-button" class="primary">Next</button>
+        </div>
+      </section>
+
+      <section id="complete-screen" class="panel hidden">
+        <p class="eyebrow">Done</p>
+        <h2>Finished</h2>
+        <p id="completion-summary" class="completion-summary"></p>
+        <p>Stop your phone recording and save the file.</p>
+        <div class="completion-actions">
+          <button id="restart-button" class="ghost">Restart task</button>
+        </div>
+      </section>
+    </main>
+    <script src="app.js?rev=28-item-stages-native-audio-20261124-v3"></script>
+  </body>
+</html>

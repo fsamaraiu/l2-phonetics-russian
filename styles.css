@@ -1,0 +1,56 @@
+:root {
+  --ink: #1d1d1b;
+  --blue: #214b72;
+  --blue-dark: #163651;
+  --paper: #ffffff;
+  --line: #b8b8b1;
+  --muted: #5b5b55;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+* { box-sizing: border-box; }
+body { background: var(--paper); margin: 0; min-width: 320px; }
+button { border: 1px solid var(--blue); border-radius: 0; cursor: pointer; font-family: Arial, Helvetica, sans-serif; font-size: .92rem; font-weight: 600; letter-spacing: .01em; padding: .68rem 1rem; }
+button:disabled { background: #d7d7d1; border-color: #d7d7d1; color: #5c5c57; cursor: not-allowed; }
+button:focus-visible { outline: 3px solid #b88a2d; outline-offset: 3px; }
+.shell { width: min(100% - 2.5rem, 760px); margin: 0 auto; padding: 3rem 0 5rem; }
+.masthead { border-bottom: 2px solid var(--ink); margin-bottom: 2.25rem; padding-bottom: 1rem; }
+.eyebrow { color: var(--muted); font-family: Arial, Helvetica, sans-serif; font-size: .72rem; font-weight: 700; letter-spacing: .08em; margin: 0 0 .5rem; text-transform: uppercase; }
+h1, h2 { color: var(--ink); font-weight: 600; letter-spacing: 0; }
+h1 { font-size: clamp(2rem, 5vw, 2.8rem); margin: 0; }
+h2 { font-size: clamp(1.35rem, 3vw, 1.75rem); margin: 0 0 .8rem; }
+.intro { color: var(--muted); font-size: 1rem; line-height: 1.55; max-width: 42rem; }
+.instructions { border-bottom: 1px solid var(--line); line-height: 1.55; padding: 0 0 1.8rem; }
+.instructions p { max-width: 41rem; }
+.instructions .primary { margin-top: .5rem; }
+.session-details { border-left: 3px solid var(--blue); font-family: Arial, Helvetica, sans-serif; margin: 1.25rem 0; padding-left: 1rem; }
+.session-details div { align-items: baseline; display: flex; gap: .6rem; margin: .35rem 0; }
+.session-details dt { color: var(--muted); font-size: .78rem; font-weight: 700; text-transform: uppercase; }
+.session-details dd { font-size: .95rem; margin: 0; }
+.panel, .trial-card { background: transparent; border: 1px solid var(--line); border-radius: 0; box-shadow: none; padding: clamp(1.3rem, 4vw, 2.2rem); }
+.primary { background: var(--blue); color: #fff; }
+.primary:hover { background: var(--blue-dark); }
+.secondary { background: #fff; color: var(--blue-dark); }
+.secondary:hover { background: #f0f0ec; }
+.ghost { background: transparent; color: var(--blue-dark); }
+.ghost:hover { background: #f0f0ec; }
+.hidden { display: none !important; }
+.runner-header { align-items: end; display: flex; justify-content: space-between; gap: 1rem; margin: 0 0 1rem; }
+.runner-header h2 { margin: 0; }
+.counter { color: var(--muted); font-family: Arial, Helvetica, sans-serif; font-size: .85rem; font-weight: 600; margin: 0; white-space: nowrap; }
+.progress-track { background: #e4e4df; border-radius: 0; height: .35rem; margin-bottom: 1.75rem; overflow: hidden; }
+#progress-bar { background: var(--blue); height: 100%; transition: width .2s ease; width: 0; }
+.instruction { color: var(--ink); font-size: 1.08rem; font-weight: 600; margin: 0 0 1.25rem; }
+.prompt { color: var(--ink); font-size: clamp(2rem, 7vw, 3.6rem); font-weight: 600; line-height: 1.2; min-height: 5rem; text-align: center; }
+.prompt-translation { color: var(--muted); font-family: Arial, Helvetica, sans-serif; font-size: .95rem; line-height: 1.45; margin: .45rem 0 0; text-align: center; }
+.trial-note { color: var(--muted); font-size: .98rem; line-height: 1.5; text-align: center; }
+.audio-controls { border-top: 1px solid var(--line); margin-top: 1.25rem; padding-top: 1rem; text-align: center; }
+.audio-label { font-weight: 700; margin: 0 0 .75rem; }
+.runner-actions { display: flex; justify-content: space-between; gap: 1rem; margin-top: 1.4rem; }
+.privacy-note { color: var(--muted); font-size: .82rem; margin: 1rem 0 0; text-align: center; }
+.completion-summary { color: var(--muted); font-family: Arial, Helvetica, sans-serif; font-size: .92rem; margin: 0 0 1.2rem; }
+.completion-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.35rem; }
+#block-break, #complete-screen { margin-top: 1rem; }
+@media (max-width: 500px) { .shell { width: min(100% - 1.5rem, 760px); padding: 2rem 0; } .runner-header { align-items: start; flex-direction: column; } .runner-actions { flex-direction: column-reverse; } .runner-actions button { width: 100%; } }
